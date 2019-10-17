@@ -7,11 +7,18 @@ namespace LottoGenerator
 {
     public partial class Form1 : Form
     {
+        List<TextBox> lottoLines = new List<TextBox>(6);
+
         public Form1()
         {
             InitializeComponent();
+            lottoLines.Add(line1);
+            lottoLines.Add(line2);
+            lottoLines.Add(line3);
+            lottoLines.Add(line4);
+            lottoLines.Add(line5);
+            lottoLines.Add(line6);
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
