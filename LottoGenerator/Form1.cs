@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LottoGenerator
@@ -14,40 +15,24 @@ namespace LottoGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int i;
-            var numbers = new List<int>(49);
-            var drawnNumbers = new List<int>(49);
+            // Fill the lotto pot
+            var LottoNumbers = Enumerable.Range(1, 49).ToList();
+            
+            var PickedNumbers = new List<int>(6);
 
-            //It is important to only have have instance and re-use it. Creating a new one will result in LESS random numbers.
             var rng = new Random();
 
-            //fill the list Numbers with a for loop here
-            for (i = 1; i < 6; i++)
+            // Draw 6 numbers
+            for (int i = 0; i < 6; i++)
             {
-                numbers[i] = rng.Next(1, 48); //Return random numbers seeded between 1 and 49
-            }
-            //draw 7 numbers from the Numbers and put them into DrawnNumbers
+                int randomBall = rng.Next(1, LottoNumbers.Count);
+                PickedNumbers.Add(randomBall);
 
-            for (i = 1; i < 6; i++)
-            {
-                int randomIndex = rng.Next(0, numbers.Count);
-                int drawnInt;
-                drawnInt = numbers[randomIndex];
-                drawnNumbers.Add(drawnInt);
-                numbers.Remove(drawnInt);
+                // Don't pick the same number twice
+                LottoNumbers.Remove(randomBall);
             }
 
-            i = 1;
-
-            for (i = 1; i < drawnNumbers.Count; i++)
-            {
-                lottoLineBox1.Text = drawnNumbers[i].ToString();
-                lottoLineBox2.Text = drawnNumbers[i].ToString();
-                lottoLineBox3.Text = drawnNumbers[i].ToString();
-                lottoLineBox4.Text = drawnNumbers[i].ToString();
-                lottoLineBox5.Text = drawnNumbers[i].ToString();
-                lottoLineBox6.Text = drawnNumbers[i].ToString();
-            }
+            line1.Text = string.Join("  ", PickedNumbers);
         }
     }
 }

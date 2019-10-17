@@ -28,7 +28,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lottoLineBox1 = new System.Windows.Forms.TextBox();
+            this.line1 = new System.Windows.Forms.TextBox();
             this.textBox37 = new System.Windows.Forms.TextBox();
             this.lottoLineBox3 = new System.Windows.Forms.TextBox();
             this.lottoLineBox6 = new System.Windows.Forms.TextBox();
@@ -60,13 +60,13 @@
             // 
             // lottoLineBox1
             // 
-            this.lottoLineBox1.Enabled = false;
-            this.lottoLineBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lottoLineBox1.Location = new System.Drawing.Point(45, 83);
-            this.lottoLineBox1.Name = "lottoLineBox1";
-            this.lottoLineBox1.ReadOnly = true;
-            this.lottoLineBox1.Size = new System.Drawing.Size(264, 20);
-            this.lottoLineBox1.TabIndex = 5;
+            this.line1.Enabled = false;
+            this.line1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.line1.Location = new System.Drawing.Point(45, 83);
+            this.line1.Name = "lottoLineBox1";
+            this.line1.ReadOnly = true;
+            this.line1.Size = new System.Drawing.Size(264, 20);
+            this.line1.TabIndex = 5;
             // 
             // textBox37
             // 
@@ -140,7 +140,7 @@
             this.Controls.Add(this.lottoLineBox6);
             this.Controls.Add(this.lottoLineBox3);
             this.Controls.Add(this.textBox37);
-            this.Controls.Add(this.lottoLineBox1);
+            this.Controls.Add(this.line1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -152,7 +152,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox lottoLineBox1;
+        private System.Windows.Forms.TextBox line1;
         private System.Windows.Forms.TextBox textBox37;
         private System.Windows.Forms.TextBox lottoLineBox3;
         private System.Windows.Forms.TextBox lottoLineBox6;
