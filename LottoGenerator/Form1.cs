@@ -14,9 +14,9 @@ namespace LottoGenerator
 
         private void button1_Click(object sender, EventArgs e)
         {
-                        int i;
-            var numbers = new List<int>();
-            var drawnNumbers = new List<int>();
+            int i;
+            var numbers = new List<int>(49);
+            var drawnNumbers = new List<int>(49);
 
             //It is important to only have have instance and re-use it. Creating a new one will result in LESS random numbers.
             var rng = new Random();
@@ -24,11 +24,11 @@ namespace LottoGenerator
             //fill the list Numbers with a for loop here
             for (i = 1; i < 6; i++)
             {
-                numbers[i] = rng.Next(1, 49); //Return random numbers seeded between 1 and 49
+                numbers[i] = rng.Next(1, 48); //Return random numbers seeded between 1 and 49
             }
             //draw 7 numbers from the Numbers and put them into DrawnNumbers
 
-            for (i = 0; i < 6; i++)
+            for (i = 1; i < 6; i++)
             {
                 int randomIndex = rng.Next(0, numbers.Count);
                 int drawnInt;
