@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace LottoGenerator
 {
@@ -40,6 +41,21 @@ namespace LottoGenerator
             }
 
             line1.Text = string.Join("  ", PickedNumbers);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+          
+            LinesList.Items.Add("1");
+            LinesList.Items.Add("2");
+            LinesList.Items.Add("3");
+            LinesList.Items.Add("5");
+            LinesList.Items.Add("6");
+        }
+
+        private void LinesList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
