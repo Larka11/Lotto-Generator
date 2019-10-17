@@ -31,7 +31,8 @@ namespace LottoGenerator
             for (i = 0; i < 6; i++)
             {
                 int randomIndex = rng.Next(0, numbers.Count);
-                var drawnInt = numbers[randomIndex];
+                int drawnInt;
+                drawnInt = numbers[randomIndex];
                 drawnNumbers.Add(drawnInt);
                 numbers.Remove(drawnInt);
             }
@@ -40,7 +41,12 @@ namespace LottoGenerator
 
             for (i = 1; i < drawnNumbers.Count; i++)
             {
-                lottoLineBox1.Text += drawnNumbers[i].ToString();
+                lottoLineBox1.Text = drawnNumbers[i].ToString();
+                lottoLineBox2.Text = drawnNumbers[i].ToString();
+                lottoLineBox3.Text = drawnNumbers[i].ToString();
+                lottoLineBox4.Text = drawnNumbers[i].ToString();
+                lottoLineBox5.Text = drawnNumbers[i].ToString();
+                lottoLineBox6.Text = drawnNumbers[i].ToString();
             }
         }
     }
