@@ -9,32 +9,34 @@ namespace LottoGenerator
     public partial class Form1 : Form
     {
         List<TextBox> lottoLines = new List<TextBox>(6);
+        public int NoOfLinesSelected;
 
         public Form1()
         {
             InitializeComponent();
-            //lottoLines.Add(line1);
-            //lottoLines.Add(line2);
-            //lottoLines.Add(line3);
-            //lottoLines.Add(line4);
-            //lottoLines.Add(line5);
-            //lottoLines.Add(line6);
+            lottoLines.Add(line1);
+            lottoLines.Add(line2);
+            lottoLines.Add(line3);
+            lottoLines.Add(line4);
+            lottoLines.Add(line5);
+            lottoLines.Add(line6);
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            LinesList.Items.Add(1);
-            LinesList.Items.Add(2);
-            LinesList.Items.Add(3);
-            LinesList.Items.Add(4);
-            LinesList.Items.Add(5);
-            LinesList.Items.Add(6);
+            //initialize combobox
+            LinesList.Items.Add("1");
+            LinesList.Items.Add("2");
+            LinesList.Items.Add("3");
+            LinesList.Items.Add("4");
+            LinesList.Items.Add("5");
+            LinesList.Items.Add("6");
         }
         private void LinesList_SelectedIndexChanged(object sender, EventArgs e)
 
         {
             //store the selected number from the combobox in a variable
-            string noOfLinesSelected = LinesList.SelectedText;
+            NoOfLinesSelected = LinesList.SelectedIndex;
 
         }
 
@@ -57,18 +59,20 @@ namespace LottoGenerator
                 LottoNumbers.Remove(randomBall);
             }
 
-            //loop to add amount of lines based on the combobox value
-            for (int i = 1; noOfLinesSelected < 6; i++)
+            //print as many lines as customer wants
+            for (int i = 0; NoOfLinesSelected <= 6; i++)
             {
-                lottoLines.Add(line1);
-                lottoLines.Add(line2);
-                lottoLines.Add(line3);
-                lottoLines.Add(line4);
-                lottoLines.Add(line5);
-                lottoLines.Add(line6);
+                line1.Text = string.Join("  ", lottoLines[i]);
+                line2.Text = string.Join("  ", lottoLines[i]);
+                line3.Text = string.Join("  ", lottoLines[i]);
+                line4.Text = string.Join("  ", lottoLines[i]);
+                line5.Text = string.Join("  ", lottoLines[i]);
+                line6.Text = string.Join("  ", lottoLines[i]);
+
+
             }
 
-            line1.Text = string.Join("  ", PickedNumbers);
+   
         }
 
 
