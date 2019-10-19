@@ -13,12 +13,29 @@ namespace LottoGenerator
         public Form1()
         {
             InitializeComponent();
-            lottoLines.Add(line1);
-            lottoLines.Add(line2);
-            lottoLines.Add(line3);
-            lottoLines.Add(line4);
-            lottoLines.Add(line5);
-            lottoLines.Add(line6);
+            //lottoLines.Add(line1);
+            //lottoLines.Add(line2);
+            //lottoLines.Add(line3);
+            //lottoLines.Add(line4);
+            //lottoLines.Add(line5);
+            //lottoLines.Add(line6);
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            LinesList.Items.Add(1);
+            LinesList.Items.Add(2);
+            LinesList.Items.Add(3);
+            LinesList.Items.Add(4);
+            LinesList.Items.Add(5);
+            LinesList.Items.Add(6);
+        }
+        private void LinesList_SelectedIndexChanged(object sender, EventArgs e)
+
+        {
+            //store the selected number from the combobox in a variable
+            string noOfLinesSelected = LinesList.SelectedText;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,22 +57,22 @@ namespace LottoGenerator
                 LottoNumbers.Remove(randomBall);
             }
 
+            //loop to add amount of lines based on the combobox value
+            for (int i = 1; noOfLinesSelected < 6; i++)
+            {
+                lottoLines.Add(line1);
+                lottoLines.Add(line2);
+                lottoLines.Add(line3);
+                lottoLines.Add(line4);
+                lottoLines.Add(line5);
+                lottoLines.Add(line6);
+            }
+
             line1.Text = string.Join("  ", PickedNumbers);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-          
-            LinesList.Items.Add("1");
-            LinesList.Items.Add("2");
-            LinesList.Items.Add("3");
-            LinesList.Items.Add("5");
-            LinesList.Items.Add("6");
-        }
 
-        private void LinesList_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
+
     }
 }
