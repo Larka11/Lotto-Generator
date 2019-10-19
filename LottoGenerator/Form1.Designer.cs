@@ -29,7 +29,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.TotalCost = new System.Windows.Forms.Label();
             this.line1 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
+            this.TotalCostBox = new System.Windows.Forms.TextBox();
             this.line3 = new System.Windows.Forms.TextBox();
             this.line6 = new System.Windows.Forms.TextBox();
             this.line5 = new System.Windows.Forms.TextBox();
@@ -71,15 +71,17 @@
             this.line1.Size = new System.Drawing.Size(264, 20);
             this.line1.TabIndex = 5;
             // 
-            // textBox37
+            // TotalCostBox
             // 
-            this.textBox37.Enabled = false;
-            this.textBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox37.Location = new System.Drawing.Point(209, 189);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.ReadOnly = true;
-            this.textBox37.Size = new System.Drawing.Size(100, 20);
-            this.textBox37.TabIndex = 41;
+            this.TotalCostBox.Enabled = false;
+            this.TotalCostBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCostBox.Location = new System.Drawing.Point(209, 189);
+            this.TotalCostBox.Name = "TotalCostBox";
+            this.TotalCostBox.ReadOnly = true;
+            this.TotalCostBox.Size = new System.Drawing.Size(59, 20);
+            this.TotalCostBox.TabIndex = 41;
+            this.TotalCostBox.Text = "€2.50";
+            this.TotalCostBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // line3
             // 
@@ -165,7 +167,7 @@
             this.Controls.Add(this.line5);
             this.Controls.Add(this.line6);
             this.Controls.Add(this.line3);
-            this.Controls.Add(this.textBox37);
+            this.Controls.Add(this.TotalCostBox);
             this.Controls.Add(this.line1);
             this.Controls.Add(this.TotalCost);
             this.Controls.Add(this.button1);
@@ -180,7 +182,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label TotalCost;
         private System.Windows.Forms.TextBox line1;
-        private System.Windows.Forms.TextBox textBox37;
+        private System.Windows.Forms.TextBox TotalCostBox;
         private System.Windows.Forms.TextBox line3;
         private System.Windows.Forms.TextBox line6;
         private System.Windows.Forms.TextBox line5;

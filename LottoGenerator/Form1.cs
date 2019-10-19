@@ -10,6 +10,7 @@ namespace LottoGenerator
     {
         List<TextBox> lottoLines = new List<TextBox>(6);
         public int NoOfLinesSelected;
+        public double LottoTotalCost = 2.50;
 
         public Form1()
         {
@@ -60,19 +61,20 @@ namespace LottoGenerator
             }
 
             //print as many lines as customer wants
-            for (int i = 0; NoOfLinesSelected <= 6; i++)
+            for (int i = 0; NoOfLinesSelected >= 6; i++)
             {
-                line1.Text = string.Join("  ", lottoLines[i]);
-                line2.Text = string.Join("  ", lottoLines[i]);
-                line3.Text = string.Join("  ", lottoLines[i]);
-                line4.Text = string.Join("  ", lottoLines[i]);
-                line5.Text = string.Join("  ", lottoLines[i]);
-                line6.Text = string.Join("  ", lottoLines[i]);
-
+                line1.Text = string.Join("  ", lottoLines[0]);
+                line2.Text = string.Join("  ", lottoLines[1]);
+                line3.Text = string.Join("  ", lottoLines[2]);
+                line4.Text = string.Join("  ", lottoLines[3]);
+                line5.Text = string.Join("  ", lottoLines[4]);
+                line6.Text = string.Join("  ", lottoLines[5]);
 
             }
+            //keep total
+            TotalCostBox.Text = ("€" + Convert.ToString(LottoTotalCost));
 
-   
+
         }
 
 
