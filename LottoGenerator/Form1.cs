@@ -62,6 +62,7 @@ namespace LottoGenerator
 
             //print as many lines as customer wants
             for (int i = 0; NoOfLinesSelected >= 6; i++)
+
             {
                 line1.Text = string.Join("  ", lottoLines[0]);
                 line2.Text = string.Join("  ", lottoLines[1]);
